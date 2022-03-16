@@ -1,3 +1,5 @@
+package com.xhateya.idn.notesapp.fragments.update
+
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
@@ -11,11 +13,11 @@ import com.xhateya.idn.notesapp.data.model.NoteData
 import com.xhateya.idn.notesapp.data.viewModelsData.NotesViewModel
 import com.xhateya.idn.notesapp.databinding.FragmentUpdateBinding
 import com.xhateya.idn.notesapp.fragments.SharedViewModels
-import com.xhateya.idn.notesapp.updateFragmentArgs
+
 
 class UpdateFragment : Fragment() {
 
-    private val args by navArgs<updateFragmentArgs>()
+    private val args by navArgs<UpdateFragmentArgs>()
     private val mSharedViewModels: SharedViewModels by viewModels()
     private val mNotesViewModel: NotesViewModel by viewModels()
 
@@ -65,7 +67,7 @@ class UpdateFragment : Fragment() {
 
     private fun updateItem() {
         val title = binding.etUptitle.text.toString()
-        val description = binding.etDescUpDate.text.toString()
+        val description = binding.etUpdate.text.toString()
         val getPriority = binding.spUpdate.selectedItem.toString()
 
         val validation = mSharedViewModels.verifyDataFromUser(title, description)

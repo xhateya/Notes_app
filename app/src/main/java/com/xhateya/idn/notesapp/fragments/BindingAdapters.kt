@@ -31,7 +31,6 @@ class BindingAdapters {
 
         @BindingAdapter("android:emptyDatabase")
         @JvmStatic
-
         fun emptyDatabase(view: View, emptyDatabase: MutableLiveData<Boolean>){
             when(emptyDatabase.value){
                 true -> view.visibility= View.VISIBLE
@@ -50,7 +49,6 @@ class BindingAdapters {
         }
         @BindingAdapter("android:parsePriorityColor")
         @JvmStatic
-
         fun parsePriorityColor(cardView: CardView, priority: Priority){
             when(priority){
                 Priority.HIGH -> {cardView.setCardBackgroundColor(cardView.context.getColor(R.color.red))}

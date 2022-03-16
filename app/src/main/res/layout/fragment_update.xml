@@ -6,14 +6,14 @@
     <data>
         <variable
             name="args"
-            type="com.xhateya.idn.notesapp.update.UpdateFragmentArgs" />
+            type="com.xhateya.idn.notesapp.fragments.update.UpdateFragmentArgs" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.update.updateFragment">
+        tools:context=".fragments.update.UpdateFragment">
 
 
         <EditText
@@ -33,7 +33,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
-            android:parsePriorityColor="@{args.currentItem.priority}"
+            android:parsePriorityToInt="@{args.currentItem.priority}"
             android:id="@+id/sp_update"
             android:layout_width="0dp"
             android:layout_height="@dimen/_60dp"
